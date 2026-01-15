@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Σύλλογος Παναγία Θυμιανή | Διατήρηση & Πολιτισμός</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Roboto:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="header-glass fixed w-full z-50 top-0" id="main-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <img src="logo.jpg" alt="Σύλλογος Κρητών Logo" class="logo-img">
+                    <div>
+                        <span
+                            class="block text-xl font-bold tracking-tight text-[#003366] brand-font uppercase">Σύνδεσμος
+                            Φιλίας Αρκαδίας & Κρήτης - Παναγία Θυμιανή </span>
+                        <span class="block text-xs text-gray-500 uppercase tracking-widest leading-none">Παράδοση •
+                            Πολιτισμός • Ενότητα</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <div class="group relative">
+                        <button class="nav-link py-4">Ο Σύλλογος</button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white border shadow-lg">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Ιστορία</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Διοικητικό Συμβούλιο</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Καταστατικό</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative">
+                        <button class="nav-link py-4">Εκδηλώσεις</button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white border shadow-lg">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Προσεχείς</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Αρχείο Φωτογραφιών</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Video</a>
+                        </div>
+                    </div>
+
+                    <div class="group relative">
+                        <button class="nav-link py-4">Πολιτισμός</button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white border shadow-lg">
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Μουσική</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Χορός</a>
+                            <a href="#" class="block px-4 py-2 hover:bg-gray-100">Γαστρονομία</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-gray-700" aria-label="Toggle Menu">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="w-[75%] mx-auto mt-28 h-[70vh] relative rounded-3xl overflow-hidden shadow-2xl group">
+
+        <video id="intro-video" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+            <source src="intro.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <div class="relative z-10 h-full flex flex-col justify-center items-center text-center px-4">
+
+            <h4 class="text-[#c5a059] uppercase tracking-[0.3em] mb-4 text-sm font-bold">Καλώς ήρθατε</h4>
+
+            <h1 class="text-white text-4xl md:text-5xl font-bold mb-8 leading-tight drop-shadow-lg">
+                Η καρδιά της Κρήτης και της Αρκαδίας χτυπά εδώ.
+            </h1>
+
+            <p class="text-gray-100 text-2xl mb-8 max-w-2xl font-light">
+                Γεφυρα Πολιτισμού, Δημιουργίας και Συνεργασίας.
+            </p>
+
+            <div class="flex gap-4">
+                <a href="#events"
+                    class="bg-white text-[#003366] px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-gray-100 transition shadow-lg">
+                    Ανακαλύψτε τις Δράσεις
+                </a>
+                <a href="#culture"
+                    class="border-2 border-white text-white px-8 py-3 rounded-full font-bold uppercase text-sm hover:bg-white hover:text-[#003366] transition">
+                    Ιστορία
+                </a>
+            </div>
+
+        </div>
+        <button id="audio-btn"
+            class="absolute bottom-6 right-6 z-20 p-3 rounded-full bg-white/20 backdrop-blur-md hover:bg-white/40 transition-all text-white border border-white/30 group-hover:scale-110">
+
+            <svg id="icon-muted" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+            </svg>
+
+            <svg id="icon-sound" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+            </svg>
+        </button>
+    </section>
+
+    <section class="py-20 max-w-7xl mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-[#003366] brand-font mb-4">Ανακαλύψτε τον Πολιτισμό μας</h2>
+            <div class="w-16 h-1 bg-[#c5a059] mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <a href="#history" class="category-btn group">
+                <div class="category-bg"></div>
+                <div class="category-card"> <svg class="w-10 h-10 mb-3 text-[#003366]" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                    <span class="text-lg font-bold text-[#003366] brand-font">Ιστορία</span>
+                </div>
+            </a>
+
+            <a href="#dance" class="category-btn group">
+                <div class="category-bg"></div>
+                <div class="category-card">
+                    <svg class="w-10 h-10 mb-3 text-[#003366]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                    </svg>
+                    <span class="text-lg font-bold text-[#003366] brand-font">Χορός</span>
+                </div>
+            </a>
+
+            <a href="#music" class="category-btn group">
+                <div class="category-bg"></div>
+                <div class="category-card">
+                    <svg class="w-10 h-10 mb-3 text-[#003366]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                            d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    </svg>
+                    <span class="text-lg font-bold text-[#003366] brand-font">Μουσική</span>
+                </div>
+            </a>
+
+            <a href="#food" class="category-btn group">
+                <div class="category-bg"></div>
+                <div class="category-card">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-cooking-pot-icon lucide-cooking-pot">
+                        <path d="M2 12h20" />
+                        <path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8" />
+                        <path d="m4 8 16-4" />
+                        <path d="m8.86 6.78-.45-1.81a2 2 0 0 1 1.45-2.43l1.94-.48a2 2 0 0 1 2.43 1.46l.45 1.8" />
+                    </svg>
+                    <span class="text-lg font-bold text-[#003366] brand-font">Γεύσεις</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+
+
+    <section id="events" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-end mb-12 border-b border-gray-200 pb-8">
+            <div>
+                <h2 class="text-4xl font-bold text-[#003366]">Τελευταία Νέα</h2>
+                <p class="text-gray-500 mt-2">Ενημερωθείτε για τις επερχόμενες εκδηλώσεις και δράσεις του Συλλόγου.
+                </p>
+            </div>
+            <a href="#"
+                class="text-[#c5a059] font-bold uppercase text-sm tracking-wider border-b-2 border-[#c5a059] hover:opacity-75 transition">Όλες
+                οι ανακοινώσεις</a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <article class="card-portal group">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&q=80&w=800"
+                        alt="Κρητικός Χορός" class="card-image">
+                    <div class="card-badge">ΕΚΔΗΛΩΣΗ</div>
+                </div>
+                <div class="p-6">
+                    <span class="text-gray-400 text-xs font-bold uppercase">15 Ιανουαρίου 2026</span>
+                    <h3 class="text-xl font-bold mt-2 mb-4 group-hover:text-[#c5a059] transition">Ετήσιος Χορός και
+                        Κοπή
+                        Πίτας</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Σας προσκαλούμε στη μεγάλη μας γιορτή στο
+                        κρητικό κέντρο, με τη συμμετοχή κορυφαίων καλλιτεχνών.</p>
+                    <a href="#" class="card-link">Περισσότερα</a>
+                </div>
+            </article>
+
+            <article class="card-portal group">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&q=80&w=800"
+                        alt="Ιστορικό Βιβλίο" class="card-image">
+                    <div class="card-badge">ΠΟΛΙΤΙΣΜΟΣ</div>
+                </div>
+                <div class="p-6">
+                    <span class="text-gray-400 text-xs font-bold uppercase">22 Φεβρουαρίου 2026</span>
+                    <h3 class="text-xl font-bold mt-2 mb-4 group-hover:text-[#c5a059] transition">Παρουσίαση
+                        Βιβλίου: "Η
+                        Κρήτη του 1821"</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Μια ιστορική αναδρομή στις θυσίες και τους
+                        αγώνες των Κρητικών μέσα από σπάνιο υλικό.</p>
+                    <a href="#" class="card-link">Περισσότερα</a>
+                </div>
+            </article>
+
+            <article class="card-portal group">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=800"
+                        alt="Κρητική Λύρα" class="card-image">
+                    <div class="card-badge">ΜΑΘΗΜΑΤΑ</div>
+                </div>
+                <div class="p-6">
+                    <span class="text-gray-400 text-xs font-bold uppercase">ΚΑΘΕ ΣΑΒΒΑΤΟ</span>
+                    <h3 class="text-xl font-bold mt-2 mb-4 group-hover:text-[#c5a059] transition">Μαθήματα Κρητικής
+                        Λύρας & Λαούτου</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-6">Ξεκινούν οι εγγραφές για το νέο κύκλο
+                        μαθημάτων παραδοσιακών οργάνων.</p>
+                    <a href="#" class="card-link">Περισσότερα</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <footer id="contact" class="pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="copyright-text uppercase tracking-widest text-xs">
+                © 2026 ΣΥΛΛΟΓΟΣ ΚΡΗΤΩΝ. Με επιφύλαξη παντός δικαιώματος.
+            </p>
+        </div>
+    </footer>
+
+    <div id="mobileMenu" class="overlay-menu flex-col items-center justify-center text-center">
+        <button onclick="toggleMenu()" class="absolute top-10 right-10 text-white" aria-label="Close Menu">
+            <svg class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <div class="space-y-8 flex flex-col text-2xl font-bold brand-font">
+            <a href="#about" onclick="toggleMenu()">Ο Σύλλογος</a>
+            <a href="#events" onclick="toggleMenu()">Εκδηλώσεις</a>
+            <a href="#culture" onclick="toggleMenu()">Κρητικός Πολιτισμός</a>
+            <a href="#contact" onclick="toggleMenu()">Επικοινωνία</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
