@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Γεύσεις Κρήτης & Αρκαδίας</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#fdfbf7] body-font antialiased text-[#003366]">
+
+    <nav class="bg-white/90 backdrop-blur-md fixed w-full z-50 border-b border-[#c5a059]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-2 text-[#003366] hover:text-[#c5a059] transition">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="font-bold uppercase tracking-widest text-sm">Πίσω στην Αρχική</span>
+                </a>
+                <div class="brand-font font-bold text-xl md:text-2xl text-[#003366]">
+                    Γαστρονομία
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="relative pt-32 pb-20 md:pt-48 md:pb-32 px-6 bg-[#003366] text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: url('https://www.transparenttextures.com/patterns/food.png');"></div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <span class="text-[#c5a059] uppercase tracking-[0.2em] text-sm font-bold mb-4 block">Παραδοση & Γευση</span>
+            <h1 class="brand-font text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Δύο τόποι,<br>Μία αγάπη για το φαγητό.
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl font-light max-w-2xl mx-auto">
+                Από το απάκι και τη στάκα της Κρήτης, μέχρι τις χυλοπίτες και το καρύδι της Αρκαδίας.
+                Ανακαλύψτε τις συνταγές που ενώνουν τα βουνά μας.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-16">
+
+        <div class="mb-20">
+            <div class="flex items-center space-x-4 mb-10">
+                <div class="h-px bg-[#c5a059] flex-grow opacity-50"></div>
+                <h2 class="brand-font text-3xl md:text-4xl font-bold text-[#003366]">Κρήτη</h2>
+                <div class="h-px bg-[#c5a059] flex-grow opacity-50"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?q=80&w=800&auto=format&fit=crop"
+                            alt="Dakos"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Ορεκτικό</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="brand-font text-2xl font-bold mb-3 group-hover:text-[#c5a059] transition-colors">
+                            Κρητικός Ντάκος</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Η αυθεντική "κουκουβάγια" με κριθαροκούλουρα, φρέσκια τριμμένη ντομάτα, ξινομυζήθρα και
+                            έξτρα παρθένο ελαιόλαδο.
+                        </p>
+                        <button onclick="openRecipe('dakos')"
+                            class="cursor-pointer inline-block text-[#003366] font-bold border-b-2 border-[#c5a059] pb-1 hover:text-[#c5a059] transition">
+                            Δείτε τη συνταγή
+                        </button>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1594970989670-5b5840652a22?q=80&w=800&auto=format&fit=crop"
+                            alt="Kalitsounia"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Γλυκό</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="brand-font text-2xl font-bold mb-3 group-hover:text-[#c5a059] transition-colors">
+                            Καλιτσούνια</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Τα παραδοσιακά λυχναράκια με γλυκιά μυζήθρα, μέλι και κανέλα. Το κέρασμα κάθε Κρητικού
+                            σπιτιού.
+                        </p>
+                        <a href="#"
+                            class="inline-block text-[#003366] font-bold border-b-2 border-[#c5a059] pb-1 hover:text-[#c5a059] transition">Δείτε
+                            τη συνταγή</a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Gamopilafo.jpg/800px-Gamopilafo.jpg"
+                            alt="Gamopilafo"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Κυρίως</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="brand-font text-2xl font-bold mb-3 group-hover:text-[#c5a059] transition-colors">
+                            Γαμοπίλαφο</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Το ρύζι της χαράς. Βρασμένο σε ζωμό από ζυγούρι και κοτόπουλο, με μπόλικο στακοβούτυρο.
+                        </p>
+                        <a href="#"
+                            class="inline-block text-[#003366] font-bold border-b-2 border-[#c5a059] pb-1 hover:text-[#c5a059] transition">Δείτε
+                            τη συνταγή</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div>
+            <div class="flex items-center space-x-4 mb-10">
+                <div class="h-px bg-[#c5a059] flex-grow opacity-50"></div>
+                <h2 class="brand-font text-3xl md:text-4xl font-bold text-[#003366]">Αρκαδία</h2>
+                <div class="h-px bg-[#c5a059] flex-grow opacity-50"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://www.argiro.gr/wp-content/uploads/2018/09/xilopites-kokkinistes.jpg"
+                            alt="Hilopites"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Κυρίως</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="brand-font text-2xl font-bold mb-3 group-hover:text-[#c5a059] transition-colors">
+                            Χυλοπίτες</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Χειροποίητες χυλοπίτες με κόκορα κρασάτο και φρέσκια μυζήθρα Τρίπολης.
+                        </p>
+                        <a href="#"
+                            class="inline-block text-[#003366] font-bold border-b-2 border-[#c5a059] pb-1 hover:text-[#c5a059] transition">Δείτε
+                            τη συνταγή</a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1559598467-f8b76c8155d0?q=80&w=800&auto=format&fit=crop"
+                            alt="Walnut Cake"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Γλυκό</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="brand-font text-2xl font-bold mb-3 group-hover:text-[#c5a059] transition-colors">
+                            Καρυδόπιτα</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Η φημισμένη Αρκαδική καρυδόπιτα, σιροπιαστή και αρωματισμένη με γαρίφαλο και κανέλα.
+                        </p>
+                        <a href="#"
+                            class="inline-block text-[#003366] font-bold border-b-2 border-[#c5a059] pb-1 hover:text-[#c5a059] transition">Δείτε
+                            τη συνταγή</a>
+                    </div>
+                </article>
+
+                <article
+                    class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1598103371890-aeb78f28877e?q=80&w=800&auto=format&fit=crop"
+                            alt="Pork"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div
+                            class="absolute top-4 right-4 bg-[#c5a059] text-white text-xs font-bold px-3 py-1 rounded-full">
+                            Κυρίως</div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="brand-font text-2xl font-bold mb-3 group-hover:text-[#c5a059] transition-colors">
+                            Γουρνοπούλα</h3>
+                        <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                            Το απόλυτο πανηγυριώτικο φαγητό της Πελοποννήσου. Τραγανή πέτσα και κρέας που λιώνει στο
+                            στόμα.
+                        </p>
+                        <a href="#"
+                            class="inline-block text-[#003366] font-bold border-b-2 border-[#c5a059] pb-1 hover:text-[#c5a059] transition">Δείτε
+                            τη συνταγή</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-[#003366] text-white py-8 text-center">
+        <p class="opacity-70 text-sm">&copy; 2025 Σύλλογος Κρητών. Όλα τα δικαιώματα κατοχυρωμένα.</p>
+    </footer>
+
+
+    <div id="recipe-modal"
+        class="fixed inset-0 bg-black/80 z-[60] hidden flex justify-center items-center p-4 backdrop-blur-sm transition-opacity duration-300">
+        <div
+            class="bg-white w-full max-w-2xl max-h-[90vh] overflow-y-auto rounded-2xl shadow-2xl relative animate-fadeIn">
+            <button onclick="closeModal()"
+                class="absolute top-4 right-4 bg-gray-100 hover:bg-red-100 text-gray-600 hover:text-red-600 w-10 h-10 rounded-full flex items-center justify-center transition z-10 cursor-pointer">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div id="modal-content">
+                <img id="modal-img" src="" class="w-full h-64 object-cover">
+                <div class="p-8">
+                    <span id="modal-category"
+                        class="text-[#c5a059] font-bold tracking-widest text-xs uppercase mb-2 block"></span>
+                    <h2 id="modal-title" class="brand-font text-3xl md:text-4xl font-bold text-[#003366] mb-6"></h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-bold text-lg mb-4 flex items-center text-[#003366]"><i
+                                    class="fas fa-shopping-basket text-[#c5a059] mr-2"></i> Υλικά</h3>
+                            <ul id="modal-ingredients" class="space-y-2 text-gray-700 text-sm list-disc pl-5"></ul>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-4 flex items-center text-[#003366]"><i
+                                    class="fas fa-list-ol text-[#c5a059] mr-2"></i> Εκτέλεση</h3>
+                            <p id="modal-steps" class="text-gray-700 text-sm leading-relaxed whitespace-pre-line"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. DATABASE OF RECIPES
+        const recipes = {
+            dakos: {
+                title: "Κρητικός Ντάκος (Κουκουβάγια)",
+                category: "Ορεκτικό / Ελαφρύ Γεύμα",
+                img: "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?q=80&w=800&auto=format&fit=crop",
+                ingredients: [
+                    "1 μεγάλο κριθαρένιο παξιμάδι (Ντάκος)",
+                    "2 μέτριες ώριμες ντομάτες (τριμμένες)",
+                    "150 γρ. Ξινομυζήθρα Κρήτης (ή φέτα)",
+                    "4-5 κ.σ. Έξτρα παρθένο ελαιόλαδο",
+                    "Ρίγανη ξερή",
+                    "Κάπαρη & Ελιές (προαιρετικά)"
+                ],
+                steps: "1. Βρέχουμε ελαφρώς το παξιμάδι κάτω από τη βρύση για 2 δευτερόλεπτα (μόνο αν είναι πολύ σκληρό). Αν είναι φρέσκο, δεν χρειάζεται.\n2. Τρίβουμε τις ντομάτες στον τρίφτη και απλώνουμε τον φρέσκο πολτό πάνω στο παξιμάδι.\n3. Προσθέτουμε από πάνω την ξινομυζήθρα (ή τη θρυμματισμένη φέτα) σε μορφή βουναλάκι.\n4. Περιχύνουμε γενναιόδωρα με το ελαιόλαδο.\n5. Πασπαλίζουμε με τη ρίγανη και προσθέτουμε την κάπαρη και τις ελιές για το τελείωμα."
+            },
+            // You can add 'hilopites' or 'gamopilafo' here later!
+        };
+
+        // 2. MODAL LOGIC
+        const modal = document.getElementById('recipe-modal');
+
+        function openRecipe(id) {
+            const data = recipes[id];
+            if (!data) return; // Safety check
+
+            // Fill Data
+            document.getElementById('modal-img').src = data.img;
+            document.getElementById('modal-category').innerText = data.category;
+            document.getElementById('modal-title').innerText = data.title;
+            document.getElementById('modal-steps').innerText = data.steps;
+
+            // Fill Ingredients List
+            const list = document.getElementById('modal-ingredients');
+            list.innerHTML = '';
+            data.ingredients.forEach(item => {
+                list.innerHTML += `<li class="mb-1">${item}</li>`;
+            });
+
+            // Show Modal
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+        }
+
+        // Close on click outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) closeModal();
+        });
+    </script>
+
+
+</body>
+
+</html>
